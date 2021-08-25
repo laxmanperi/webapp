@@ -19,7 +19,7 @@ variable "environment" {
 variable "password" {
   description = "Name of the environment"
   type        = string
-  default     = "Admin@123"
+  default     = "Admin"
 }
 
 variable "subnets" {
