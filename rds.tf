@@ -23,7 +23,7 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name   = aws_db_subnet_group.rds.id
   
   tags = {
-    Name        =  length(var.name) == 0 ? "${var.project}-${var.environment}${var.tag}-rds" : var.name
+    Name        =  length(var.name) == 0 ? "${var.project}-${var.environment}-rds" : var.name
     Environment = var.environment
     Project     = var.project
   }
