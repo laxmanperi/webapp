@@ -25,5 +25,5 @@ variable "password" {
 variable "subnets" {
   type        = list(string)
   description = "Subnets to deploy in"
-  default     = ["subnet-4f98ed7e"]
+  default     = ["subnet-4f98ed7e","subnet-50193b0f"]
 }
