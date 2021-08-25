@@ -1,3 +1,7 @@
+provider "aws" {
+    region = "us-east-1"
+}
+
 resource "aws_db_subnet_group" "rds" {
   name        = length(var.name) == 0 ? "${var.project}-${var.environment}-rds" : var.name
   description = "Our main group of subnets"
