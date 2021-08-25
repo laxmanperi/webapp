@@ -53,6 +53,7 @@ pipeline {
                    ls -l
                    kubectl apply -f deployment.yaml
                    kubectl apply -f ingress.yaml
+                   kubectl apply -f mysql.yaml
                    '''
                 
                }
