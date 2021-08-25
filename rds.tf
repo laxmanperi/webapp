@@ -3,7 +3,7 @@ provider "aws" {
 }
 
 resource "aws_db_subnet_group" "rds" {
-  name        = length(var.name) == 0 ? "${var.project}-${var.environment}-rds" : var.name
+  name        = length(var.name) == 0 ? "${var.project}-${var.environment}-rds"
   description = "Our main group of subnets"
   subnet_ids  = var.subnets
 }
@@ -23,7 +23,7 @@ resource "aws_db_instance" "default" {
   db_subnet_group_name   = aws_db_subnet_group.rds.id
   
   tags = {
-    Name        =  length(var.name) == 0 ? "${var.project}-${var.environment}-rds" : var.name
+    Name        =  length(var.name) == 0 ? "${var.project}-${var.environment}-rds"
     Environment = var.environment
     Project     = var.project
   }
